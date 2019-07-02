@@ -1,0 +1,127 @@
+h3{
+    position: relative;
+    color: #39dca3;
+    padding-left: 13px;
+}
+
+h3:before{
+    content: '';
+    width: 4px;
+    height: 28px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    background-color: #39dca3;
+}
+
+h5{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.auth-banner{
+    background-image: url(/assets/img/banner-crear-cuenta-y-login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+
+.auth-banner__text-container {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 40px;
+}
+
+.notch{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 26px;
+        height: auto;
+}
+
+.arrows{
+    position: absolute;
+    top: -69px;
+    left: -303px;
+    width: 309px;
+}
+
+.background-right{
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 25px);
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.background-bottom{
+    position: absolute;
+    width: 25px;
+    height: calc(100% - 64px);
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.title{
+    position: relative;
+    z-index: 1;
+}
+
+.list{
+    padding-left: 16px;
+    color: #fff;
+    list-style: none;
+    position: relative;
+}
+
+li:before{
+    content: '\2010';
+    display: block;
+    position: relative;
+    max-width: 0;
+    max-height: 0;
+    left: -22px;
+    top: 0;
+    line-height: 17px;
+    color: #fff;
+    font-size: 50px;
+}
+
+.form{
+    background-color: #f3f4f4;
+}
+
+
+@media (min-width: 992px){
+    .auth-banner__text-container {
+       padding: 55px;
+    }
+    .notch {
+        width: 45px;
+   }
+
+   .arrows{
+    top: -79px;
+    left: -397px;
+    width: auto;
+    }
+
+    .background-right{
+        width: calc(100% - 45px);
+    }
+
+    .background-bottom{
+        width: 45px;
+        height: calc(100% - 115px);
+    }
+}
+
+

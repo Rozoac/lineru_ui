@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PAGES_ROUTES } from './pages.routes';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import {MatInputModule} from '@angular/material/input';
 import { InicioComponent } from './inicio/inicio.component';
 import { ComponentsModule } from '../components/components.module';
 import { SharedModule } from '../shared/shared.module';
@@ -23,7 +24,8 @@ import { LoginComponent } from './login/login.component';
         PAGES_ROUTES,
         FormsModule,
         ComponentsModule,
-        SharedModule
+        SharedModule,
+        MatInputModule
     ]
 })
 export class PagesModule { }

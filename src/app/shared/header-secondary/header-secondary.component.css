@@ -20,15 +20,27 @@ header{
     color: white!important;
 }
 
-
-.create-account a:hover{
+.create-account a:hover {
     background: white!important;
     color: #4588fb!important;
 }
 
+.user-border {
+    position: absolute;
+    border: 2px solid #3aebc6;
+    background-color: transparent;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+}
 
-
-
+.user-border i {
+    font-size: 54px!important;
+    top: -18px;
+    left: -5px;
+    position: absolute;
+}
 
 @media screen and (min-width: 992px) {
         header .navbar-nav .nav-item {
