@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseAmount: 1000000
 };

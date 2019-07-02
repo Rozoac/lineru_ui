@@ -3,20 +3,26 @@ import { PAGES_ROUTES } from './pages.routes';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { InicioComponent } from './inicio/inicio.component';
+import { ComponentsModule } from '../components/components.module';
 import { SharedModule } from '../shared/shared.module';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
     declarations: [
-        InicioComponent
+        InicioComponent,
+        CreateAccountComponent,
+        LoginComponent,
     ],
     exports: [
-        InicioComponent
+        InicioComponent,
     ],
     imports: [
         CommonModule,
         PAGES_ROUTES,
         FormsModule,
+        ComponentsModule,
         SharedModule
     ]
 })

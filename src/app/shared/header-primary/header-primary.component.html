@@ -3,9 +3,11 @@
 		<div class="row lin-background-primary lin-text-align-right py-2">
 			<div class="col-md-10 offset-md-1">
 				<div class="row">
-					<div class="col-md-8 col-lg-9 col-xl-10"></div>
+					<div class="col-md-8 col-lg-9 col-xl-10 lin-text-align-center">
+						<app-base-amount></app-base-amount>
+					</div>
 					<div class="col-md-4 col-lg-3 col-xl-2 lin-text-align-left">
-						<a href="">
+						<a [routerLink]="['/registro']" routerLinkActive="">
 							<strong class="lin-color-white">
 								Crear cuenta
 							</strong>
@@ -18,7 +20,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="px-0 px-lg-3 col-xl-10 offset-xl-1">
-				<nav class="navbar navbar-expand-lg">
+				<nav class="navbar navbar-expand-lg p-0">
 								<a class="navbar-brand " href="#">
 									<img src="../assets/img/logo-blue.svg" alt="">
 								</a>
@@ -27,25 +29,38 @@
 								</button>
 								<div class="collapse navbar-collapse" id="navbarNavDropdown">
 									<ul class="navbar-nav mr-auto w-100 px-3 px-xl-0">
-										<li class="nav-item active">
-											<a class="nav-link lin-text-semibold lin-color-primary" href="#">INICIO</a>
+										<li class="nav-item active lin-text-align-center">
+											<a class="nav-link  lin-text-semibold lin-color-primary btn-block py-0 py-lg-4 px-0 " routerLink="/" routerLinkActive="router-link-active" >
+												<span class="d-block py-3">INICIO</span>
+											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link lin-text-semibold lin-color-primary" href="#">QUIÉNES SOMOS</a>
+										<li class="nav-item lin-text-align-center">
+											<a class="nav-link  lin-text-semibold lin-color-primary btn-block py-0 py-lg-4 px-0" [routerLink]="['/quienes-somos']" routerLinkActive="nav-link" >
+												<span class="d-block py-3">QUIÉNES SOMOS</span>
+											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link lin-text-semibold lin-color-primary" href="#">CÓMO FUNCIONA</a>
+										<li class="nav-item lin-text-align-center">
+											<a class="nav-link  lin-text-semibold lin-color-primary btn-block py-0 py-lg-4 px-0" [routerLink]="['/como-funciona']" routerLinkActive="router-link-active" >
+												<span class="d-block py-3">CÓMO FUNCIONA</span>
+											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link lin-text-semibold lin-color-primary" href="#">BENEFICIOS</a>
+										<li class="nav-item lin-text-align-center">
+											<a class="nav-link  lin-text-semibold lin-color-primary btn-block py-0 py-lg-4 px-0" [routerLink]="['/beneficios']" routerLinkActive="router-link-active" >
+												<span class="d-block py-3">BENEFICIOS</span>
+											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link lin-text-semibold lin-color-primary" href="#">AYUDA</a>
+										<li class="nav-item lin-text-align-center">
+											<a class="nav-link  lin-text-semibold lin-color-primary btn-block py-0 py-lg-4 px-0" [routerLink]="['/ayuda']" routerLinkActive="router-link-active" >
+												<span class="d-block py-3">AYUDA</span>
+											</a>
 										</li>
 									</ul>
 								</div>
 
-								<a href="">MI CUENTA</a>
+								<a class="btn btn-outline-secondary lin-text-semibold my-2 ml-1 btn-sign-in lin-color-primary" [routerLink]="['/iniciar-sesion']" routerLinkActive="">
+									<i class=" mdi mdi-account-circle mdi-18px mr-1"></i>
+									<span  class="icon-text " >MI CUENTA</span>
+								</a>
 				</nav>
 			</div>
 		</div>

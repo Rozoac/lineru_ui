@@ -1,15 +1,24 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900&display=swap');
 
 img, img:focus {
     outline: 0!important;
+}
+label{
+	font-size: 18px!important;
+}
+
+input{
+	font-weight: 700!important;
+	font-size: 16px!important;
 }
 
 
 /* FUENTES */
 
-* {
+*{
 	font-family: 'Titillium Web', sans-serif;
+		box-sizing: border-box;
 }
 
 h1, h2, h3, h4 {
@@ -33,11 +42,6 @@ a {
 }
 
 
-
-/* container */
-.lin-container {
-}
-
 /* POSITION */
 .lin-position-absolute{
 	position: absolute;
@@ -57,15 +61,27 @@ a {
 ================================================================ */
 
 .lin-color-primary{
-    color:#4588ff;
+    color:#4588ff!important;
 }
 
 .lin-color-secondary{
 	color:#14B1E6 ;
 }
+.lin-color-yellow{
+	color: #fee079 ;
+}
+.lin-color-green{
+	color: #39dca3 ;
+}
 
 .lin-background-primary{
     background-color: #4588ff!important;
+}
+.lin-background-yellow{
+	background-color: #fcac02!important;
+}
+.lin-background-yellow:hover {
+	background-color: #fdc502!important;
 }
 
 /*INLINE-BLOCK*/
@@ -370,6 +386,9 @@ a {
 .lin-full-width {
 	width: 100% !important;
 }
+.lin-full-heigth {
+	height: 100% !important;
+}
 
 /*TEXT ALIGN*/
 .lin-text-align-center,
@@ -395,6 +414,9 @@ a {
 }
 .lin-color-black {
   color: #000 !important;
+}
+.lin-color-grey {
+  color: #808285 !important;
 }
 
 /*Responsive Hide*/

@@ -1,0 +1,43 @@
+ <div class="row no-gutters">
+     <div class="col-12 col-lg-6 bg-white shadow-box-card">
+             <mat-card class="example-card p-4">
+                 <h3 class="h3-text lin-color-green lin-text-extrabold mb-3">CALCULA TU CRÉDITO</h3>
+                    <mat-card-content>
+                            <form class="example-form">
+                                        <mat-form-field class="lin-full-width">
+                                          <input #txtProgress class="lin-color-green" [(ngModel)]="value" (ngModelChange)="onChanges($event)" type="number" matInput placeholder="¿Cuánto dinero necesitas?" value="150000" name="value">
+                                        </mat-form-field>
+                                        <div class="slider lin-display-flex lin-justify-content-center lin-align-items-center">
+                                            <p class="m-0 pr-2">${{min | number}}</p>
+                                            <mat-slider
+                                                class="lin-full-width"
+                                                [max]="max"
+                                                [min]="min"
+                                                [(ngModel)]="value"
+                                                name="value">
+                                             </mat-slider>  
+                                             <p class="m-0 pl-2">${{max | number}}</p>
+                                        </div>
+                                                                      
+                                        <mat-form-field class="lin-full-width">
+                                                <input matInput [min]="minDate" [max]="maxDate" (click)="picker.open()" [matDatepicker]="picker" placeholder=" ¿Cuándo puedes pagarnos? (en 30 días)" [formControl]="dateForm">
+                                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                <mat-datepicker #picker></mat-datepicker>
+                                              </mat-form-field>
+                                    <button class="lin-color-white lin-text-semibold btn btn-lg lin-background-yellow btn-block">SOLICITA TU CRÉDITO</button>
+                                  </form>
+                    </mat-card-content>
+                  
+        </mat-card> 
+
+     </div>
+     <div class="col-12 col-lg-6 bg-white shadow-box-card">
+            <mat-card class="example-card p-4 lin-full-heigth">
+                    <h3 class="lin-font-size-xsmall lin-color-grey  lin-text-semibold mb-3 lin-text-align-center">LAS CUENTAS CLARAS. VALORES A PAGAR</h3>
+                       <mat-card-content class="lin-full-heigth lin-display-flex lin-justify-content-center lin-align-items-center">
+                              <p class="total p-0 m-0 lin-text-align-center lin-font-size-xsmall lin-text-semibold">TOTAL A PAGAR ${{value | number}}</p>
+                       </mat-card-content>
+                     
+           </mat-card> 
+     </div>
+ </div>

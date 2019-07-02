@@ -1,5 +1,6 @@
 header{
     position: sticky;
+    height: 90px;
     z-index: 20;
     box-shadow: 0 3px 7px 0 rgba(0,0,0,.2);
 }
@@ -10,7 +11,7 @@ header{
 
 .btn-sign-in {
     padding: 10px 20px;
-    border-color: #4588fb;
+    border-color: #fff;
     border-radius: 2px;
 }
 
@@ -20,8 +21,9 @@ header{
 }
 
 
-.router-link-active{
-    /* border-bottom: 4px solid #fdc502; */
+.create-account a:hover{
+    background: white!important;
+    color: #4588fb!important;
 }
 
 
@@ -36,6 +38,6 @@ header{
 
 @media screen and (min-width: 1200px){
     .btn-sign-in, .navbar-brand {
-        width: 160px;
+        /* width: 100px; */
     }
 }

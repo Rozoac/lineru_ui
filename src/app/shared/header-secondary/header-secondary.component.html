@@ -1,0 +1,28 @@
+<header class="lin-background-primary lin-display-flex lin-align-items-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="px-0 px-lg-3 col-xl-10 offset-xl-1">
+                    <nav class="navbar p-0 lin-display-flex lin-justify-content-space-between">
+                                    <a class="navbar-brand " [routerLink]="['/']" >
+                                        <img src="../assets/img/logo-white.svg" alt="">
+                                    </a>
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div *ngIf="typeHeader === 'login'" class="create-account lin-display-flex lin-align-items-center">
+                                        <p class="m-0 lin-color-white mr-2 lin-font-semibold">¿No tienes una cuenta?</p>
+                                        <a class="btn btn-outline-secondary lin-text-semibold my-2 ml-1 btn-sign-in lin-color-white" [routerLink]="['/registro']" routerLinkActive="">
+                                            <span  class="icon-text" >CRÉALA</span>
+                                        </a>
+                                    </div>
+                                    <div *ngIf="typeHeader === 'create'" class="create-account lin-display-flex lin-align-items-center">
+                                        <p class="m-0 lin-color-white mr-2 lin-font-semibold">¿Ya tienes una cuenta?</p>
+                                        <a class="btn btn-outline-secondary lin-text-semibold my-2 ml-1 btn-sign-in lin-color-white" [routerLink]="['/iniciar-sesion']" routerLinkActive="">
+                                            <span  class="icon-text" >INICIA SESIÓN</span>
+                                        </a>
+                                    </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>

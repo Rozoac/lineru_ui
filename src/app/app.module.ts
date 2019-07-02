@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTES } from './app.routes';
 import { AppComponent } from './app.component';1
 import { PagesComponent } from './pages/pages.component';
-import { ServiceModule } from './services/service.module';
-import { SharedModule } from './shared/shared.module';
 import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.component';
 
 
@@ -13,14 +11,12 @@ import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.compon
   declarations: [
     AppComponent,
     PagesComponent,
-    NoPageFoundComponent
+    NoPageFoundComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     APP_ROUTES,
-    ServiceModule,
-    SharedModule
   ],
   providers: [
     
