@@ -35,11 +35,28 @@ header{
     border-radius: 24px;
 }
 
+.user{
+    cursor: pointer;
+}
+
+.user p{
+    right: 30px;
+    text-align: right;
+    width: 160px;
+
+    /* bottom: 25px; */
+}
+
 .user-border i {
     font-size: 54px!important;
     top: -18px;
     left: -5px;
     position: absolute;
+}
+
+.dropdown-menu {
+    top: 30px;
+    left: -160px;
 }
 
 @media screen and (min-width: 992px) {

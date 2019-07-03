@@ -1,1 +1,23 @@
-<app-header-secondary header="login"></app-header-secondary>
+<app-header-secondary header="account"></app-header-secondary>
+
+<div class="container">
+    <div class="row lin-display-flex lin-justify-content-center">
+            <div *ngIf="credit" class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Credito en deuda</div>
+                    <div class="card-body">
+                      <h5 class="card-title ">Valor solicitado: ${{credit?.valorSolicitado | number}}</h5>
+                          <ul>
+                              <li>Fecha de pago: {{credit?.fechaPagar | date}}</li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                          </ul>
+
+                          <button (click)="pagarDeuda()" class="lin-color-white lin-text-semibold btn btn-lg lin-background-yellow btn-block">PAGAR</button>
+                    </div>
+                  </div>
+
+                  <h3 *ngIf="!credit" class="lin-color-green lin-text-extrabold">NO TIENES CREDITOS POR PAGAR</h3>
+    </div>
+</div>
+

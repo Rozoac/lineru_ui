@@ -1,2 +1,26 @@
 <app-header-secondary header="account"></app-header-secondary>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+                <h3 class="h3-text mt-5 lin-text-align-center lin-color-green lin-text-extrabold mb-3">MIS SOLICITUDES APROVADAS</h3>
+            <div class="caja-1 lin-display-flex lin-justify-content-center lin-align-items-center">
+                <ng-container *ngFor="let solicitud of solicitudes">
+                    <div class="card border-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Valor Solicitado: ${{solicitud.valorSolicitado | number}}</div>
+                            <div class="card-body text-success">
+                              <h5 class="card-title">Fecha maxima de pago: {{solicitud.fechaPagar | date}}</h5>
+                              <h5 *ngIf="solicitud?.pagoCredito" class="card-title lin-text-align-center lin-font-size-small lin-text-semibold" >PAGADA</h5>
+                              <h5 [routerLink]="['/cuenta/pagar-credito']"   *ngIf="!solicitud?.pagoCredito" class="color-red color-danger card-title lin-text-align-center lin-font-size-small lin-text-semibold" >POR PAGAR</h5>
+                            </div>
+                          </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="col-md-6">
+                <h3 class="h3-text mt-5 lin-text-align-center lin-color-primary lin-text-extrabold mb-3">MIS SOLICITUDES RECHAZADAS</h3>
+                
+        </div>
+    </div>
+</div>
+

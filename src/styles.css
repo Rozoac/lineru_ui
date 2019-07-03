@@ -50,6 +50,9 @@ a {
 .lin-position-absolute{
 	position: absolute;
 }
+.lin-position-relative{
+	position: relative;
+}
     
 /* DISPLAYS */
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { AmountService } from '../../services/amount.service';
 
 @Component({
   selector: 'app-base-amount',
@@ -10,8 +10,9 @@ export class BaseAmountComponent {
 
   public baseAmount: number;
 
-  constructor() {
-    this.baseAmount = environment.baseAmount;
+  constructor(public _amountService: AmountService) {
+    this.baseAmount = _amountService.baseAmount;
    }
+
 
 }

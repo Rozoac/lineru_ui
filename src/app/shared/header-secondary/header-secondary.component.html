@@ -6,6 +6,7 @@
                                     <a class="navbar-brand " [routerLink]="['/']" >
                                         <img src="../assets/img/logo-white.svg" alt="">
                                     </a>
+                                    <app-base-amount *ngIf="typeHeader === 'account'"></app-base-amount>
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                                         <span class="navbar-toggler-icon"></span>
                                     </button>
@@ -21,11 +22,18 @@
                                             <span  class="icon-text" >INICIA SESIÓN</span>
                                         </a>
                                     </div>
-                                    <div *ngIf="typeHeader === 'account'" class="create-account ">
-                                        <p class="m-0 lin-color-white mr-2 lin-font-semibold">Hola Juan Rozo</p>
-                                        <div class="user-border">
+                                    <div *ngIf="typeHeader === 'account'" class="user lin-position-relative lin-display-flex lin-justify-content-center lin-align-items-center">
+                                        <p class="lin-position-absolute m-0 lin-color-white lin-font-semibold">Hola, {{usuario.nombre}}</p>
+                                        <div class="user-border" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="mdi mdi-account-circle text-white"></i>
                                         </div>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" [routerLink]="['/cuenta']">Cuenta</a>
+                                            <a class="dropdown-item" [routerLink]="['/cuenta/solicitar-credito']">Solicitar Credito</a>
+                                            <a class="dropdown-item" [routerLink]="['/cuenta/pagar-credito']"> Pagar Credito</a>
+                                            <a class="dropdown-item" (click)="cerrarSesion()">Cerrar Sesión</a>
+                                              </div>
+                                        
                                     </div>
                     </nav>
                 </div>

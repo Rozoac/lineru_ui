@@ -6,6 +6,7 @@ import { MiCuentaComponent } from './mi-cuenta/mi-cuenta.component';
 import { RequestCreditComponent } from './request-credit/request-credit.component';
 import { PayCreditComponent } from './pay-credit/pay-credit.component';
 import { SharedModule } from '../shared/shared.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { SharedModule } from '../shared/shared.module';
         CommonModule,
         FormsModule,
         SharedModule,
+        ComponentsModule,
         ACCOUNT_ROUTES
     ]
 })

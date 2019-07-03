@@ -37,17 +37,20 @@
                         <h3 class="lin-color-green lin-text-extrabold">CREA TU CUENTA LINERU
                             </h3>
 
-                        <form class="example-form">
+                        <form ngNativeValidate [formGroup]="forma" (ngSubmit)="registrarUsuario()" class="example-form">
                                 <mat-form-field class="lin-full-width w-100 mt-4">
-                                  <input  class="lin-color-green"  type="text" matInput placeholder="Nombre" name="value">
+                                  <input formControlName="nombre" name="nombre"  class="lin-color-green"  type="text" matInput placeholder="Nombre" >
                                 </mat-form-field>
                                 <mat-form-field class="lin-full-width">
-                                  <input  class="lin-color-green"  type="email" matInput placeholder="Correo" name="value">
+                                  <input formControlName="correo" name="correo"  class="lin-color-green"  type="email" matInput placeholder="Correo" >
                                 </mat-form-field>
                                 <mat-form-field class="lin-full-width">
-                                  <input  class="lin-color-green"  type="number" matInput placeholder="Cedula" name="value">
+                                  <input formControlName="cedula" name="cedula"  class="lin-color-green"  type="text" matInput placeholder="Cedula" >
                                 </mat-form-field>
-                            <button class="lin-color-white lin-text-semibold btn btn-lg lin-background-yellow btn-block">INICIAR SESIÓN</button>
+                                <mat-form-field class="lin-full-width">
+                                  <input formControlName="clave" name="clave"  class="lin-color-green"  type="password" matInput placeholder="Clave" >
+                                </mat-form-field>
+                            <button [disabled]="forma.invalid" type="submit" class="lin-color-white lin-text-semibold btn btn-lg lin-background-yellow btn-block">CREAR CUENTA</button>
                           </form>
                     </div>
                 </div>

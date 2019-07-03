@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-mi-cuenta',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiCuentaComponent implements OnInit {
 
-  constructor() { }
+  public solicitudes;
+
+  constructor(public _usuarioService:UsuarioService) {
+    this.cargarSaldosTotales();
+
+   }
 
   ngOnInit() {
   }
+
+  cargarSaldosTotales(){
+      this._usuarioService.creditosUsuario().subscribe((res:any) => {
+        this.solicitudes = res.creditos
+        console.log(res.creditos)
+      })
+    }
 
 }

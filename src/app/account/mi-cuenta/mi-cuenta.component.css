@@ -1,0 +1,13 @@
+.caja-1, .caja-2{
+    flex-direction: column;
+}
+.caja-1 .card{
+
+        border: 3px solid #39dca3!important;
+
+}
+
+.color-red{
+    color: red!important;
+    cursor: pointer;
+}

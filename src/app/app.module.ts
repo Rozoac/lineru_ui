@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PagesComponent } from './pages/pages.component';
 import { AccountComponent } from './account/account.component';
 import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.component';
+import { ServiceModule } from './services/service.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.compon
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ServiceModule,
     APP_ROUTES,
   ],
   providers: [

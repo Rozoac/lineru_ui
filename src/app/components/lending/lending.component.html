@@ -3,7 +3,7 @@
              <mat-card class="example-card p-4">
                  <h3 class="h3-text lin-color-green lin-text-extrabold mb-3">CALCULA TU CRÉDITO</h3>
                     <mat-card-content>
-                            <form class="example-form">
+                            <form  class="example-form">
                                         <mat-form-field class="lin-full-width">
                                           <input #txtProgress class="lin-color-green" [(ngModel)]="value" (ngModelChange)="onChanges($event)" type="number" matInput placeholder="¿Cuánto dinero necesitas?" value="150000" name="value">
                                         </mat-form-field>
@@ -24,7 +24,7 @@
                                                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                                 <mat-datepicker #picker></mat-datepicker>
                                               </mat-form-field>
-                                    <button class="lin-color-white lin-text-semibold btn btn-lg lin-background-yellow btn-block">SOLICITA TU CRÉDITO</button>
+                                    <button (click)="lending()" class="lin-color-white lin-text-semibold btn btn-lg lin-background-yellow btn-block">SOLICITA TU CRÉDITO</button>
                                   </form>
                     </mat-card-content>
                   
